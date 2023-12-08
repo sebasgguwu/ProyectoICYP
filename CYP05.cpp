@@ -47,3 +47,30 @@ int main()
 		scanf_s("%i", &valor[i]);
 		scanf_s("%f", &valor2[i]);
 	}
+	burbujaInt(valor, numElem);
+	//burbujaFloat(valor2, numElem);
+	for (int i = 0; i < numElem; i++)
+	{ 
+		while (valor[i] != valor[i + 1]) {
+		numAlum++;
+		break;
+		}
+	}
+	printf("\n%i", numAlum);
+	for (int i = 0; i < numElem; i++)
+	{
+		if (valor2[i] == valor2[i + 1]){
+			if (valor2[1][i] > valor2[1][i + 1]) {
+				aux[i] = valor2[i + 1];
+				printf("\n%i %f", valor[i], aux[i]);
+
+			}
+		}
+		//while (valor[i] != valor[i + 1]) {
+		//	printf("\n%i %f", valor[i], valor2[i]);
+		//	break;
+		//}
+	}
+		
+
+}

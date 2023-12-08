@@ -18,3 +18,32 @@ void burbuja(int arr[], float arr2[], int numDatos)
 				arr2[comp + 1] = auxFloat;
 			}
 }
+
+int main()
+{
+	int valor[10];
+	float valordos[10];
+	int numElem;
+	int numAlum = 0;
+	scanf_s("%i", &numElem); 
+	int i;
+	for (i = 0; i < numElem; i++)
+	{
+		scanf_s("%i", &valor[i]);
+		scanf_s("%f", &valordos[i]);
+	}
+	for (i = 0; i < numElem; i++)
+	{
+		if (valor[i] != valor[i + 1]) {
+			numAlum++;
+		}
+	}
+	printf("\n%i", numAlum);
+	burbuja(valor, valordos, numElem);
+	for (i = 0; i < numElem; i++)
+	{
+		if (valor[i] != valor[i + 1]) {
+			printf("\n%i %f", valor[i], valordos[i]);
+		}
+	}
+}
